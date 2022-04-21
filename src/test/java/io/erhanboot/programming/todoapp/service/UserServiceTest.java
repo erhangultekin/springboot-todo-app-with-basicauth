@@ -55,11 +55,11 @@ class UserServiceTest {
     }
 
     @Test
-    public void testFindByUserId_whenUserIdDoesNotExist_shouldReturnUserNotFoundException(){
+    public void whenUserIdDoesNotExist_shouldReturnUserNotFoundException(){
 
-        Mockito.when(userRepository.findById(2L)).thenReturn(Optional.empty());
+        Mockito.when(userRepository.findById(10L)).thenReturn(Optional.empty());
 
-        assertThrows(NoSuchElementException.class,()->underTest.getUserById(2L));
+        assertThrows(NoSuchElementException.class,()->underTest.getUserById(10L));
 
     }
 
