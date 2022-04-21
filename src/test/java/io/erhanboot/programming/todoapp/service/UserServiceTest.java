@@ -38,7 +38,7 @@ class UserServiceTest {
     }
 
     @Test
-    void whenCreateUserWithCalledValidParameter_itShouldReturnValid() {
+    public void whenCreateUserWithCalledValidParameter_itShouldReturnValid() {
         User user = new User();
         List<Todo> testList = new ArrayList<>();
         user.setId(1L);
